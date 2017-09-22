@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.net.Uri;
 
@@ -12,17 +13,25 @@ import com.uuch.adlibrary.AdManager;
 import com.uuch.adlibrary.bean.AdInfo;
 import com.uuch.adlibrary.transformer.DepthPageTransformer;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private List<AdInfo> advList = null;
+    private TextView dateText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initAd();
+        dateText = (TextView) findViewById(R.id.date);
+
+        SimpleDateFormat sDateFormat = new SimpleDateFormat(
+                "yyyy-MM-dd    hh:mm:ss");
+        String date = sDateFormat.format(new java.util.Date());
+        dateText.setText(date);
+        initAd();        
     }
 
     private void initAd() {
