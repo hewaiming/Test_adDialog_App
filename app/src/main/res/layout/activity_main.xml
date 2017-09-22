@@ -2,73 +2,81 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="5dp"
-    android:orientation="vertical"
-    card_view:cardBackgroundColor="@color/cardview_light_background"
-    card_view:cardCornerRadius="5dp">
-
-    <RelativeLayout
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="@color/cardview_light_background"
+        card_view:cardCornerRadius="5dp">
 
-        <TextView
-            android:id="@+id/title"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="top|center_horizontal"
-            android:text="标题：第一个CardView程序"
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
+            android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/pic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title"
-            android:layout_centerInParent="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/gugong" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center_horizontal"
+                android:text="标题：第一个CardView程序"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/pic"
-            android:layout_alignRight="@+id/pic"
-            android:layout_marginRight="10dp"
-            android:text="风景很美"
-            android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/gugong" />
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/pic"
-            android:text="正文：Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。尚未有统一中文名称，中国大陆地区较多人使用“安卓”或“安致”。"
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pic"
+                android:layout_alignRight="@+id/pic"
+                android:layout_marginRight="10dp"
+                android:text="风景很美"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text"
-            android:hint="请输入内容" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pic"
+                android:text="正文：Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。尚未有统一中文名称，中国大陆地区较多人使用“安卓”或“安致”。"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/input"
-            android:text="这里会显示日期"
-            android:textSize="30sp" />
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:hint="请输入内容" />
 
-</android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input"
+                android:text="这里会显示日期"
+                android:textSize="10sp" />
+            <Button
+                android:id="@+id/nextBtn"
+                android:text="RecyclerView+CardView"
+                android:textSize="12sp"
+                android:layout_below="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>
